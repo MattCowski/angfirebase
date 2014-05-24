@@ -10,10 +10,7 @@
 </div>
 
 <div class="jumbotron">
-  <span ng-show="auth.user">
-  {{auth.user.name}} | <a href="#" ng-click="auth.$logout()">Logout</a>
-</span>
-<a href="#" ng-hide="auth.user" ng-click="auth.$login('facebook')">Login</a>
+  
   <h1>'Allo, 'Allo! {{user}}</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
