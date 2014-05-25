@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('angFbKtsApp')
-  .controller('LoginController', function($scope, simpleLogin, $location) {
+angFbKtsApp.controller('LoginController', function($scope, simpleLogin, $location, $rootScope) {
     $scope.pass = null;
     $scope.err = null;
     $scope.email = null;
@@ -26,8 +25,12 @@ angular.module('angFbKtsApp')
       else {
         simpleLogin.loginPassword($scope.email, $scope.pass, function(err, user) {
           $scope.err = err? err + '' : null;
-          if( !err && cb ) {
-            cb(user);
+          if( !err) {
+
+            $rootScope.user = user;
+            if(cb) {
+               cb(user);
+            }
           }
         });
       }

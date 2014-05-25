@@ -1,7 +1,6 @@
-(function (angular) {
+
   'use strict';
-  angular.module('angFbKtsApp')
-    .run(function ($injector, $location, $rootScope, loginRedirectPath) {
+  angFbKtsApp.run(function ($injector, $location, $rootScope, loginRedirectPath) {
       if ($injector.has('$route')) {
         new RouteSecurityManager($location, $rootScope, $injector.get('$route'), loginRedirectPath);
       }
@@ -78,4 +77,4 @@
       }
     }
   };
-})(angular);
+

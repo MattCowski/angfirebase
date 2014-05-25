@@ -1,8 +1,7 @@
 'use strict';
 
-angular.module('angFbKtsApp')
-  .controller('MainCtrl', function ($scope) {
-    // $rootScope.user;
+angFbKtsApp.controller('MainCtrl', function ($scope, $rootScope) {
+
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

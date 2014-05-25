@@ -1,15 +1,15 @@
 'use strict';
 
-angular
-  .module('angFbKtsApp', [
+this.angFbKtsApp = angular.module('angFbKtsApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'ngRoute',
     // 'angularfire',
     'angularfire.login'
-  ])
-  .config(function ($routeProvider) {
+]);
+
+this.angFbKtsApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
